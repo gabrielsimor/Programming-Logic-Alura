@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha(linhas){
+        let br = '<br>'
+        document.write(br.repeat(linhas));
+    }
+    function titulo(texto){
+        document.write(`<h1>${texto}</h1>`);
+    }
+    let vitorias = parseInt(prompt('Qual o numero de vitorias? '));
+    let empates = parseInt(prompt("Qual o numero de empates? "));
+    vitorias = vitorias * 3 + empates;
+    titulo('Calculadora de Pontos');
+    document.write(`Os pontos do seu time é ${vitorias}`);
+    pulaLinha(1)
+    titulo('Em relação ao ano passado:');
+    if(vitorias > 28){
+      document.write('Seu time está melhor que o ano passado');  
+    }
+    if(vitorias < 28){
+      document.write('Seu time está pior que o ano passado');  
+    }
+    if(vitorias === 28){
+      document.write('Seu time está igual ao ano passado');  
+    }
+    
+</script>

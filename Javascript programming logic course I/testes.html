@@ -1,0 +1,19 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha(quant){
+        document.write('<br>'.repeat(linhas));
+}
+    function escreve(texto){
+        document.write(texto)
+    }
+    
+    let nome = prompt("Qual seu nome? ");
+    document.write(`Olá ${nome} !`);
+    pulaLinha(1);
+    document.write('Seja bem vindo');
+    pulaLinha(1);
+    document.write('É um prazer te-lo por aqui');
+    let pergunta = parseInt(prompt("O que você quer escrever? "));
+    pulaLinha(5);
+    escreve(pergunta*pergunta);
+</script>

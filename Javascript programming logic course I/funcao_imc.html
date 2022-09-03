@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<script>
+    function pulaLinha(linhas){
+        let br = '<br>'
+        document.write(br.repeat(linhas));
+    }
+    function calculaImc(altura, peso){
+        return peso/(altura*altura)
+        
+    }
+    let imcGabriel = calculaImc(1.75, 62);
+    let imcMaryna = calculaImc(1.50, 60);
+    
+    document.write(imcGabriel.toFixed(2));
+    pulaLinha(5);
+    document.write(imcMaryna.toFixed(2));
+</script>

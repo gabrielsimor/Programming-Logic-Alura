@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<canvas width="600" height="400"></canvas>
+<script>
+    let canva = document.querySelector('canvas');
+    let paint = canva.getContext('2d');
+
+    function square(inicioX, inicioY, finalX, finalY){
+        paint.fillRect(inicioX, inicioY, finalX, finalY);
+    }
+    function color(color){
+        paint.fillStyle = color;
+    }
+ 
+    color('darkgreen')
+    square(0,0,600,400)
+    color('yellow')
+    paint.beginPath()
+    paint.moveTo(300,125)
+    paint.lineTo(100,200)
+    paint.lineTo(500,200)
+    paint.fill()
+    color('yellow')
+    paint.beginPath()
+    paint.moveTo(300,275)
+    paint.lineTo(100,200)
+    paint.lineTo(500,200)
+    paint.fill()
+    color('blue')
+    paint.beginPath();
+    paint.arc(300, 200, 50, 0, 2*3.14);
+    paint.fill();
+
+
+
+</script>

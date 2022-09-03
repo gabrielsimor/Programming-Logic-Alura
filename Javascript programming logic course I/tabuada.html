@@ -1,0 +1,17 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha(linhas){
+        document.write('<br>'.repeat(linhas));
+    }
+   
+    let multiplicador = parseInt(1);
+    let tabuada = parseInt(prompt('Digite um numero: '));
+    document.write(`========= TABUADA DO ${tabuada} =========`)
+    while(multiplicador != 11){
+        pulaLinha(1);
+        document.write(`${multiplicador} X ${tabuada} = ${multiplicador * tabuada}`)
+        multiplicador++
+    }
+    pulaLinha(1);
+    document.write(`=================================`)
+</script>

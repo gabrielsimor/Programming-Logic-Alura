@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<canvas width="600" height="400"></canvas>
+<button>Adicionar Bloco</button>
+<script>
+    let tela = document.querySelector('canvas');
+    let pincel = tela.getContext('2d');
+    let button = document.querySelector('button')
+
+    function desenhaQuadrado(x, y, cor){
+        pincel.fillStyle = cor;
+        pincel.fillRect(x, y, 50, 50);
+        pincel.fillStroke = 'black';
+        pincel.strokeRect(x, y, 50, 50);
+    }
+    let x = 0;
+    function adcionaBloco(){
+        desenhaQuadrado(x, 0, 'darkgreen');
+        x += 50;
+    }
+       
+    button.onclick = adcionaBloco;
+    
+    /*
+    desenhaQuadrado(0, 0, 'darkgreen');
+    desenhaQuadrado(0,50,'yellow');
+    desenhaQuadrado(0, 100, 'red');
+*/
+</script>

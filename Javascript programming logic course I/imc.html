@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<script>
+    function pulaLinha(linhas){
+        let br = '<br>'
+        document.write(br.repeat(linhas));
+    }
+    let nome = prompt('Qual é seu nome? ');
+    let peso = prompt('Qual seu peso? ');
+    let altura = prompt('Qual sua altura em CM? Ex: 175 ')
+    altura = altura / 100
+    const imc = peso/(altura*altura);
+    pulaLinha(1);
+    document.write(`<h1>Seu IMC é ${imc.toFixed(2)}</h1>`);
+    pulaLinha(2);
+    if(imc < 18.5){
+        document.write(`<h2>${nome}, você está abaixo do peso!</h2>`);
+    }
+    else if(imc >= 18.50 && imc <= 24.90){
+        document.write(`<h2>${nome}, você está no peso normal!</h2>`);
+    }
+    else if(imc >= 25.00 && imc <= 29.90 ){
+        document.write(`<h2>${nome}, você está acima do peso!</h2>`);
+    }
+    else if(imc >= 30.00){
+        document.write(`<h2>${nome}, você está em algum nivel de obesidade!</h2>`);
+    }
+</script>
